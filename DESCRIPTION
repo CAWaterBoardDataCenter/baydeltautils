@@ -1,0 +1,34 @@
+Package: baydeltautils
+Type: Package
+Title: Data Analysis Utilities for the Bay-Delta
+Version: 0.1
+Date: 2016-11-11
+Authors@R: person("Matthew", "Holland",
+  email = "matthew.holland@waterboards.ca.gov",
+  role = c("aut", "cre"))
+Description: Provides utilities for analysis of hydrological and biological
+    data to support water management planning in California's San Francisco Bay/
+    Sacramento-San Joaquin Delta Estuary.
+Depends:
+    R (>= 3.2.1)
+License: GPL-3
+LazyData: TRUE
+Imports:
+    lubridate,
+    utils,
+    stats,
+    openxlsx,
+    reshape2,
+    formula.tools,
+    grDevices,
+    graphics,
+    ggplot2,
+    tibble,
+    scales,
+    lazyeval,
+    gtable,
+    Rcpp,
+    munsell,
+    plyr,
+    assertthat
+RoxygenNote: 6.1.1

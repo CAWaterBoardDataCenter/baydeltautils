@@ -1,0 +1,1505 @@
+
+
+
+
+
+<!doctype html>
+<!--
+California State Template
+Version 5.0
+
+Based on Twitter Bootstrap
+-->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
+<!--[if (gt IE 9)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    
+
+<meta charset="utf-8">
+<title>Dayflow</title>
+<meta name="Author" content="State of California" />
+<meta name="Description" content="State of California" />
+<meta name="Keywords" content="California, government" />
+
+<!-- Use highest compatibility mode, enable Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<!-- for Blackberry, AvantGo -->
+<meta name="MobileOptimized" content="320"> 
+<!-- for Windows mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=0">
+
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+
+
+
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/css/dwr.core.css">
+<link rel="stylesheet" href="/css/extras.css">
+<link rel="stylesheet" href="/css/AuthoringUIExperience/sitecore-extra.css">
+
+    <link rel="stylesheet" href="/css/colorscheme-oceanside.css">
+
+<!--[if IE]>
+<link rel="stylesheet" href="/css/dwr.core-ie9-1.css" type="text/css">
+<link rel="stylesheet" href="/css/dwr.core-ie9-2.css" type="text/css">
+<![endif]-->
+
+<!-- selectivizr.com, emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8 -->
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src="/js/libs/selectivizr-min.js"></script>
+<![endif]-->
+
+<!-- modernizr.com, feature detection -->
+<script src="/js/libs/modernizr-2.0.6.min.js"></script>
+<script src="/js/libs/modernizr-extra.min.js"></script>
+
+
+<!-- For iPad 3-->
+<link rel="apple-touch-icon" sizes="144x144" href="/images/template2014/apple-touch-icon-144x144.png">
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon" sizes="114x114" href="/images/template2014/apple-touch-icon-114x114.png">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon" sizes="72x72" href="/images/template2014/apple-touch-icon-72x72.png">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon" href="/images/template2014/apple-touch-icon-57x57.png">
+<!-- For Nokia -->
+<link rel="shortcut icon" href="/images/template2014/apple-touch-icon-57x57.png">
+<!-- For everything else -->
+<link rel="shortcut icon" href="/-/media/C615C05FEB8141E7992F66BF8D373120.ashx">
+
+
+<!-- Microsoft. Activate ClearType. -->
+<!--[if IE]>
+<meta http-equiv="cleartype" content="on">
+<![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/js/libs/html5shiv.min.js"></script>
+  <script src="/js/libs/respond.min.js"></script>
+<![endif]-->
+
+
+
+<meta name="VIcurrentDateTime" content="636671197130155650" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+
+</head>
+<!-- Set thet  two-column-->
+<body class="two-column">
+    <header role="banner" id="header" class="global-header fixed">
+        <div id="skip-to-content">
+            <a href="#main-content">Skip to Main Content</a>
+        </div>
+
+        <div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+    <div class="container p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="form-group form-inline">
+            <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+            <input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+            <button type="button" class="btn btn-primary">Set Location</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Settings Bar -->
+        <div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
+    <div class="container  p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
+            <div class="btn-group"><button type="button" class="btn btn-primary disableHighContrastMode">Default</button></div>
+            <div class="btn-group"><button type="button" class="btn btn-primary enableHighContrastMode">High Contrast</button></div>
+        </div>
+        <div class="btn-group" role="group" aria-label="textSizeMode">
+            <div class="btn-group"><button type="button" class="btn btn-primary resetTextSize">Reset</button></div>
+            <div class="btn-group"><button type="button" class="btn btn-primary increaseTextSize"><span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-plus-line"></small></span></button></div>
+            <div class="btn-group"><button type="button" class="btn btn-primary decreaseTextSize"><span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-minus-line"></small></span></button></div>
+        </div>
+
+        <!-- <button type="button" class="btn btn-primary clipboard-activeonhover">Save links on hover</button> -->
+
+    </div>
+</div>
+        <!-- Alert Banner -->
+        
+
+
+
+        <!-- Utility Header-->
+        
+
+
+<div class="utility-header">
+    <div class="container">
+        <div class="group">
+            <div class="half">
+                <ul class="utility-links social-media-links">
+                    <li><a href="http://ca.gov/" aria-label="CA-Gov"><span class="ca-gov-icon-logo" aria-hidden="true"></span><span class="sr-only"></span></a></li>
+                    
+                    <li class="p-r-0">Share:</li>
+                    <li><a class="ca-gov-icon-share-facebook" title="Share via Facebook" tabindex="0"></a></li>
+                    <li><a class="ca-gov-icon-share-twitter" title="Share via Twitter" tabindex="0"></a></li>
+                    <li><a class="ca-gov-icon-share-googleplus" title="Share via Google+" tabindex="0"></a></li>
+                    
+                </ul>
+            </div>
+            <div class="half settings-links">
+                <ul class="utility-links">
+                                <li>
+                                    <a href="/About" target="">About</a>
+                                </li>
+                                <li>
+                                    <a href="/Contact" target="">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="/News/Current-Conditions" target="">Current Conditions</a>
+                                </li>
+                   <li><a role="button" data-toggle="collapse" href="#siteSettings" aria-expanded="false" aria-controls="siteSettings">Settings</a></li>
+                       
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        <div class="branding">
+            <div class="header-organization-banner">
+                <a href="/"><img src="/images/dwr-logo-new.png" alt="/" /></a>
+            </div>
+        </div>
+
+
+        <!-- Include Mobile Controls -->
+        <!-- mobile navigation controls -->
+        <div class="mobile-controls">
+            
+            <span class="mobile-control toggle-menu"><span class="ca-gov-icon-menu" aria-hidden="true"></span><span class="sr-only">Menu</span></span>
+            <span class="mobile-control-group mobile-header-icons">
+                <span class="mobile-control contact-link"><span class="sr-only">Contact</span></span>
+                <!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
+            </span>
+            <span class="mobile-control toggle-search"><span class="ca-gov-icon-search" aria-hidden="true"></span><span class="sr-only">Search</span></span>
+            <span class="mobile-control-group mobile-menu-icons">
+                <!-- Add more mobile controls here. These will be on the top right section of the expanded mobile menu -->
+            </span>
+        </div>
+
+        <div class="navigation-search">
+
+
+            <div id="head-search" class="search-container  fade">
+                <form action="/api/sitecore/Search/Search" id="local_form" method="post">    <div class="textfield-container">
+        <label for="search_local_textfield" accesskey="s" class="hidden">Search this site: </label>
+        <input type="hidden" id="quick-search-tab" name="tab" value="content" />
+        <input data-search-id="_quick" type="text" name="search_local_textfield" id="search_local_textfield" class="search-textfield" size="35" autocomplete="off" placeholder="Search Content, Documents and More..."/>
+    </div>
+    <div class="submit-container">
+        <button type="submit"><span class="ca-gov-icon-search"><span class="sr-only">Search</span></span></button>
+    </div>
+    <button type="button" class="close close-search" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+</form>
+            </div>
+
+            
+
+
+
+
+<nav id="navigation" class="main-navigation megadropdown auto-highlight mobile-closed">
+    <ul id="nav_list" class="top-level-nav">
+
+        
+        <li class="home-link nav-item">
+            <a href="/" class="first-level-link"><span id="nav_home_container" class="ca-gov-icon-home" aria-hidden="true"></span><span class="sr-only">Home</span>Home</a>
+        </li>
+
+        
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a href="/Water-Basics" class="first-level-link"><span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Water Basics</a>
+
+
+                <div class="sub-nav">
+                    
+
+
+  <div class="full">
+
+        <ul class="second-level-nav">
+                    <li class="unit2">
+                        <a href="/Water-Basics/Agriculture" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Agriculture
+                                    <div class="link-description">California is an agricultural leader, and it depends on irrigation. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/The-California-Water-System" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>The California Water System
+                                    <div class="link-description">Our water system is a complex relationship between nature and manmade structures that move water. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Climate-Change-Basics" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Climate Change Basics
+                                    <div class="link-description">Climate change can have a profound impact on California’s water resources.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Conservation-Tips" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Conservation Tips
+                                    <div class="link-description">Water conservation is part of the California lifestyle. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/The-Delta" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>The Delta
+                                    <div class="link-description">The Sacramento-San Joaquin Delta is the heart of California’s water system.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Drought" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Drought
+                                    <div class="link-description">Drought is a reoccurring feature of California’s climate. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Environment" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Environment
+                                    <div class="link-description">California&#39;s unique geography and climate foster a diverse ecosystem that relies on water.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Flood" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Flood
+                                    <div class="link-description">California is prone to periodic, and sometimes severe, floods.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Groundwater" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Groundwater
+                                    <div class="link-description">The water stored beneath our feet is an important water supply source in California.
+ 
+
+</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Water-Basics/Glossary" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-waterbasics" aria-hidden="true"></span>Glossary
+                                    <div class="link-description">Find definitions of key terms and concepts related to our work.</div>
+                        </a>
+                    </li>
+            
+        </ul>
+    </div>
+                    
+                </div>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a href="/What-We-Do" class="first-level-link"><span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>What We Do</a>
+
+
+                <div class="sub-nav">
+                    
+
+
+  <div class="full">
+
+        <ul class="second-level-nav">
+                    <li class="unit2">
+                        <a href="/Programs/All-Programs/Division-of-Safety-of-Dams" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Dam Safety
+                                    <div class="link-description">We provide oversight to the design, construction, and maintenance of over 1,200 dams in California.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Drought-Mitigation" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Drought Mitigation
+                                    <div class="link-description">California must do all it can to prepare for the recurring impacts of drought. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Education" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Education
+                                    <div class="link-description">We educate students and communities throughout California on water issues and water safety.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Emergency-Response" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Emergency Management
+                                    <div class="link-description">We protect life and property from catastrophic events such as flood, drought, and infrastructure fai ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Flood-Preparedness" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Flood Preparedness
+                                    <div class="link-description">We work with communities and emergency responders to prepare for flood season.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Infrastructure" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Infrastructure
+                                    <div class="link-description">We construct, maintain and ensure the safety of a many water infrastructure facilities.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Power" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Power
+                                    <div class="link-description">The SWP is the fourth largest producer of energy in the state.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Recreation" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Recreation
+                                    <div class="link-description">The SWP provides extensive recreational activities at and around its reservoirs.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Science" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Science
+                                    <div class="link-description">Science is integral to our policy and management decisions.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Sustainability" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Sustainability
+                                    <div class="link-description">Our work aims to protect natural ecosystems’ abilities to meet the needs of future generations.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Water-Storage-And-Supply" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-whatwedo" aria-hidden="true"></span>Water Storage &amp; Supply
+                                    <div class="link-description">We operate and maintain the State Water Project and support sustainable groundwater management.</div>
+                        </a>
+                    </li>
+            
+        </ul>
+    </div>
+                    
+                </div>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a href="/Programs" class="first-level-link"><span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Programs</a>
+
+
+                <div class="sub-nav">
+                    
+
+
+  <div class="full">
+
+        <ul class="second-level-nav">
+                    <li class="unit2">
+                        <a href="/Programs/All-Programs" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>All Programs
+                                    <div class="link-description">Learn more about our other programs and projects that help sustainably manage California’s water res ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Bay-Delta" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Bay Delta
+                                    <div class="link-description">Our work in the Sacramento-San Joaquin Delta aims to improve ecosystems and water quality, supply, r ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/California-Water-Plan" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>California Water Plan
+                                    <div class="link-description">We provide a collaborative planning framework to make informed decisions for our water future.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/All-Programs/Division-of-Safety-of-Dams" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Division of Safety Dams
+                                    <div class="link-description">DSOD regulates more than 1200 dams to prevent failure, safeguard life, and protect property. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Engineering-And-Construction" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Engineering &amp; Construction
+                                    <div class="link-description">We provide engineering, geology, real estate, and geodetic services for an array of water infrastruc ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Environmental-Services" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Environmental Services
+                                    <div class="link-description">We conduct scientific and environmental analysis to help protect and restore the environment.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Flood-Management" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Flood Management
+                                    <div class="link-description">Our work in statewide flood forecasting and flood operations help reduce flood risk.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Groundwater-Management" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Groundwater Management
+                                    <div class="link-description">We support the sustainable management of California’s underground water reserves.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Integrated-Regional-Water-Management" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Integrated Regional Water Management
+                                    <div class="link-description">We work with regional water managers to implement solutions that increase regional self-reliance.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/State-Water-Project" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>State Water Project
+                                    <div class="link-description">This water storage and delivery system provides water to almost 27 million Californians and 750,000  ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Programs/Water-Use-And-Efficiency" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-programs" aria-hidden="true"></span>Water Use &amp; Efficiency
+                                    <div class="link-description">We assist agencies and individuals with agricultural and urban water conservation.</div>
+                        </a>
+                    </li>
+            
+        </ul>
+    </div>
+                    
+                </div>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a href="/Work-With-Us" class="first-level-link"><span class="ca-gov-icon-people" aria-hidden="true"></span>Work with Us</a>
+
+
+                <div class="sub-nav">
+                    
+
+
+  <div class="full">
+
+        <ul class="second-level-nav">
+                    <li class="unit2">
+                        <a href="/About/Careers" class="second-level-link">                          
+                                <span class="ca-gov-icon-people" aria-hidden="true"></span>Careers
+                                    <div class="link-description">Join us for a rewarding career ensuring the sustainability of California&#39;s water resources.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Work-With-Us/Grants-And-Loans" class="second-level-link">                          
+                                <span class="ca-gov-icon-people" aria-hidden="true"></span>Grants &amp; Loans
+                                    <div class="link-description">We offer a number of grant and loan programs that support integrated water management activities.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Work-With-Us/Real-Estate" class="second-level-link">                          
+                                <span class="ca-gov-icon-people" aria-hidden="true"></span>Real Estate
+                                    <div class="link-description">We acquire temporary and permanent land rights to support our mission.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Work-With-Us/Procurement" class="second-level-link">                          
+                                <span class="ca-gov-icon-people" aria-hidden="true"></span>Procurement
+                                    <div class="link-description">We contract for goods and services through our procurement process.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Work-With-Us/Technical-Assistance" class="second-level-link">                          
+                                <span class="ca-gov-icon-people" aria-hidden="true"></span>Technical Assistance
+                                    <div class="link-description">We provide technical guidance, assistance, and resources through 4 regional offices.</div>
+                        </a>
+                    </li>
+            
+        </ul>
+    </div>
+                    
+                </div>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a href="/News" class="first-level-link"><span class="ca-gov-icon-cal" aria-hidden="true"></span>News</a>
+
+
+                <div class="sub-nav">
+                    
+
+
+  <div class="full">
+
+        <ul class="second-level-nav">
+                    <li class="unit2">
+                        <a href="/News/Current-Conditions" class="second-level-link">                          
+                                <span class="ca-gov-icon-calendar" aria-hidden="true"></span>Current Conditions
+                                    <div class="link-description">We provide real-time hydrologic information, including reservoir and river conditions.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/News/Blog" class="second-level-link">                          
+                                <span class="ca-gov-icon-calendar" aria-hidden="true"></span>DWR Updates
+                                    <div class="link-description">Find feature stories, program updates, videos, and more. </div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/News/Events" class="second-level-link">                          
+                                <span class="ca-gov-icon-calendar" aria-hidden="true"></span>Events
+                                    <div class="link-description">View upcoming and past DWR events</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/News/News-Releases" class="second-level-link">                          
+                                <span class="ca-gov-icon-calendar" aria-hidden="true"></span>News Releases
+                                    <div class="link-description">View our news releases for the latest information on our work and projects.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/News/Public-Notices" class="second-level-link">                          
+                                <span class="ca-gov-icon-calendar" aria-hidden="true"></span>Public Notices
+                                    <div class="link-description">Find notices on public hearings, intent to award contracts and grants, and purchases. </div>
+                        </a>
+                    </li>
+            
+        </ul>
+    </div>
+                    
+                </div>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a href="/Library" class="first-level-link"><span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Library</a>
+
+
+                <div class="sub-nav">
+                    
+
+
+  <div class="full">
+
+        <ul class="second-level-nav">
+                    <li class="unit2">
+                        <a href="/SearchResults?search=&amp;primaryFilters=&amp;secondaryFilters=&amp;tab=documents" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Documents
+                                    <div class="link-description">View DWR reports and publications in our document library.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/What-We-Do/Education/Education-Materials" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Educational Materials
+                                    <div class="link-description">We provide educational publications to view, download, and order.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Library/Modeling-and-Analysis" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Modeling &amp; Analysis
+                                    <div class="link-description">We develop and maintain a number of state-of-the-art models and analytical tools.</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="/Library/Other-DWR-Portals" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Other DWR Portals
+                                    <div class="link-description">DWR maintains several additional web portals containing data and maps. These portals remains unchang ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="https://pixel-ca-dwr.photoshelter.com/index" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Photos
+                                    <div class="link-description">Pixel – our web-based photo gallery – features free downloadable images of California’s natural reso ...</div>
+                        </a>
+                    </li>
+                    <li class="unit2">
+                        <a href="https://www.youtube.com/user/calwater" class="second-level-link">                          
+                                <span class="ca-gov-icon-dwr-library" aria-hidden="true"></span>Videos
+                                    <div class="link-description">View our YouTube channel for videos featuring our projects, facilities, and latest news.</div>
+                        </a>
+                    </li>
+            
+        </ul>
+    </div>
+                    
+                </div>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li class="nav-item ">
+            <a class="first-level-link"><span class="ca-gov-icon-search-right" aria-hidden="true"></span>Search</a>
+
+
+
+        </li>
+
+
+    </ul>
+</nav>
+
+
+
+
+        </div>
+
+        <div class="header-decoration"></div>
+    </header>
+
+
+
+
+
+    
+
+        <div id="main-content" class="main-content">
+
+
+
+                <div class="wrapper">
+                    
+<div class="section collapsed-sm">
+    <div class="row">
+        <div class="two-thirds">
+            
+
+
+<ol class="breadcrumb"><li><a href="/">Home</a></li><li><a href="/Programs">Programs</a></li><li><a href="/Programs/Environmental-Services">Environmental Services</a></li><li><a href="/Programs/Environmental-Services/Compliance-Monitoring-And-Assessment">Compliance Monitoring and Assessment</a></li><li class='active'>Dayflow</li></ol>
+        </div>
+        <div class="third breadcrumb">
+        </div>
+    </div>
+</div>
+
+<main class="main-primary">        
+    <div class="row">
+        
+
+
+
+
+        
+    <div class="detail clearfix content-title">
+                    <h1>Dayflow</h1>
+            <div class="description">
+                <div class="rich-text">
+                    Dayflow is the estimate of daily average outflow from the Delta. It is computed once per year following the start of the new water year (October 1). At that time official QA/QC&rsquo;d data is requested from several (Table 1) sources. Once all input data is received, Dayflow estimate of Delta outflow is computed.
+<p style="margin: 8.4pt 0in 0.15in;">The Dayflow program also estimates the following as daily averages:</p>
+<ol>
+    <li>Net flow through the Delta Cross Channel and Georgiana Slough (when measured flow is not available).</li>
+    <li>Net flow at Jersey Point (also called QWEST)</li>
+    <li>Position of X2, the 2 ppt salinity isohaline.</li>
+</ol>
+<p style="margin: 8.4pt 0in 0.15in;">The Dayflow estimate of Delta outflow is referred to as the &ldquo;net Delta outflow index&rdquo; (NDOI) because it does not an account for tidal flows, the fortnight lunar fill-drain cycle of the estuary, or barometric pressure changes. It is a quantity that never actually occurs in real time. Rather, it is an estimate of the net difference between ebbing and flooding tidal flows at Chipps Island (~ + / - 150,000 cfs), aliased to a daily average. Depending on conditions, the actual net Delta outflow for a given day can be much higher or lower than the Dayflow estimate. <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Publications/Dayflow-Net-Delta-Outflow-vs-Net-Delta-Outflow-Index.pdf?la=en&amp;hash=4CE39705E5508F605E3FC597108D90D34A36554D" target="_blank">Dayflow Net Delta Outflow vs Net Delta Outflow Index</a>  provides an example comparison of Dayflow output with measured daily average outflow.</p>
+<h3 style="margin-bottom: 4.5pt;"><span style="color: black;"> </span>Table 1: Dayflow program: Responsible Agencies And Input Data </h3>
+<div class="table-responsive">
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+            <p><strong>Responsible Agency</strong></p>
+            </td>
+            <td>
+            <p><strong>Input data</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>USGS</p>
+            </td>
+            <td>
+            <p>Sacramento River at Freeport, Yolo Bypass at Woodland, Cosumnes River at </p>
+            Michigan Bar, San Joaquin River at Vernalis, Delta Cross Channel, Georgiana Slough
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>USACOE</p>
+            </td>
+            <td>
+            <p>Calaveras River</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>EBMUD</p>
+            </td>
+            <td>
+            <p>Mokelumne River at Woodbridge</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>DWR O&amp;M</p>
+            </td>
+            <td>
+            <p>Precipitation at Stockton Fire Department, Clifton Court Forebay gate flow, Barker Slough </p>
+            export, Byron Bethany ID depletion, X2 (only when outflow is negative)
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>DWR Bay-Delta</p>
+            </td>
+            <td>
+            <p>Estimated Delta island consumptive use</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>DWR DPLA</p>
+            </td>
+            <td>
+            <p>Sacramento Weir spill, Lisbon Weir flow</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>USBR</p>
+            </td>
+            <td>
+            <p>Delta Cross-Channel gate status, Tracy export, Contra Costa export</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <p>SCWD</p>
+            </td>
+            <td>
+            <p>Lake Barryessa releases, Lake Solano inflow, Putah Creek</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+                </div>
+            </div>
+    </div>
+
+
+        <h3>Data</h3>
+
+        <div class="panel-group">
+                <div class="panel panel-default">
+                        <div class="panel-heading" id="heading-Dayflow">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle collapsed link-Dayflow" data-toggle="collapse" data-parent="" href="#collapse-Dayflow" aria-expanded="false">Dayflow Data Through Water Year 2017</a>
+                            </h4>
+                        </div>
+                        <div id="collapse-Dayflow" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                            <div class="panel-body active" id="cd925e0f-15b5-4c9c-9223-8e4bf3e5c66e" tabindex="0" aria-hidden="false">
+                                <section>
+                                    <!-- Begin content -->
+                            <div id="Dayflow" class="description">
+                                <div class="rich-text"><a href="http://">http://</a>Note: Dayflow output no longer includes Water Year Classification. Water Year Classification data are available at <a href="http://cdec.water.ca.gov/cgi-progs/iodir/wsihist">CDEC</a>.
+<p><strong>Single Year Output: All Values are Flows in CFS.</strong></p>
+<div class="table-responsive">
+<table class="table">
+    <tbody>
+        <tr>
+            <th width="29%">WaterYear</th>
+            <th><br />
+            CSV<br />
+            Format</th>
+            <th>Comments*</th>
+        </tr>
+        <tr>
+            <td>Oct 1929 - Dec 1939</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/Oct1929-Dec1939.csv?la=en&amp;hash=23D464CFFB38C0E9047B92F510495086AD40B1F5" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>Jan 1940 - Dec 1949</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/Jan1940-Dec1949.csv?la=en&amp;hash=A2F692952E48A2FEDE1FD82372922AB7C038C7EA" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>Jan 1950 - Sep 1955</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/Jan1950-Sep1955.csv?la=en&amp;hash=2E88BA8F69221A66B2824799F19F7743E1A6DD86" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>1956 - 1969</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/wy1956-1969.csv?la=en&amp;hash=E829101CEE8BC1FE13F6BBAF68B504090C2736F4" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>1970 - 1983</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/wy1970-1983.csv?la=en&amp;hash=2B9C90ABDE40DCA397B5EDAE4A4CE926A8E7A11C" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>1984 - 1996</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/wy1984-1996.csv?la=en&amp;hash=BBB4726AB2CFBFA4A30E4F35A028C28E00590DD1" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>1997 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations1997.csv?la=en&amp;hash=D3FCD81123B6536FB311A22E53D55AC5C8D9CA70" target="_blank">CSV</a></td>
+            <td><a href="http://">1997 comments</a></td>
+        </tr>
+        <tr>
+            <td>1998 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations1998.csv?la=en&amp;hash=28E33283BEE136625E01A0A9C6F70C683EF949B6" target="_blank">CSV</a></td>
+            <td><a href="http://">1998 comments</a></td>
+        </tr>
+        <tr>
+            <td>1999 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations1999.csv?la=en&amp;hash=022D14A256597EBAFF5D4A37D080001B5231FFE8" target="_blank">CSV</a></td>
+            <td><a href="http://">1999 comments</a></td>
+        </tr>
+        <tr>
+            <td>2000 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2000.csv?la=en&amp;hash=1DC1DAFFC6430F614D563D5904B87F982CA752A4" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>2001 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2001.csv?la=en&amp;hash=50B0860302CD74CF1E99FA0225504C1A6F937C95" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>2002 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2002.csv?la=en&amp;hash=31B753FFEDA01E15941B84343B62D85A79232F22" target="_blank">CSV</a></td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>2003 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2003.csv?la=en&amp;hash=D0C52D0EFA2E44257D1AC140B09C8D381C8A6A0A" target="_blank">CSV</a></td>
+            <td><a href="http://">2003 comments</a></td>
+        </tr>
+        <tr>
+            <td>2004 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2004.csv?la=en&amp;hash=04B16067C7EBC76ECF917454ED86C5A517D83B4B" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2004comments.pdf?la=en&amp;hash=D22A10308B2CE5C90F166D491F756183CECBBDBA" target="_blank">2004 comments</a></td>
+        </tr>
+        <tr>
+            <td>2005 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2005.csv?la=en&amp;hash=856E57D9AD06A2F6104925CCA2A2A78DFBD1EC74" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2005comments.pdf?la=en&amp;hash=8622A321C10E3D967285DE62F4D8E9CCC647E8AF" target="_blank">2005 comments</a></td>
+        </tr>
+        <tr>
+            <td>2006 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2006.csv?la=en&amp;hash=BB5FCF9C56138F0810BF0DF5498FE4902E83FA11" target="_blank">CSV</a></td>
+            <td><a href="http://">2006 comments</a></td>
+        </tr>
+        <tr>
+            <td>2007 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2007.csv?la=en&amp;hash=8E30A2C2A164F844F120E57C35A7AD0C50122AB8" target="_blank">CSV</a></td>
+            <td><a href="http://">2007 comments</a></td>
+        </tr>
+        <tr>
+            <td>2008 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2008.csv?la=en&amp;hash=A9C23AAB3A789DE26868F4A0EECC7B92813EFEAE" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2008Comments.pdf?la=en&amp;hash=8554D0552516B3C3C7B7BCDAAEE3C4817C16487D" target="_blank">2008 comments</a></td>
+        </tr>
+        <tr>
+            <td>2009 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2009.csv?la=en&amp;hash=29427A38B8FE1E648A3FB0DECE69AC47FADC79EC" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2009Comments.pdf?la=en&amp;hash=AB18FB253F2C2E00661C6DC6C563FE679F867BF1" target="_blank">2009 comments</a></td>
+        </tr>
+        <tr>
+            <td>2010 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2010.csv?la=en&amp;hash=95A8CA4D051F7575ED10C66DD85102EE7A1B1F0C" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2010DayFlowUpdate_Corection.pdf?la=en&amp;hash=0821AD281AC48C427181C4F6C86BBD6BB74751ED" target="_blank">2010 day flow update/correction</a> (05/18/2011) <br />
+            <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2010Comments.pdf?la=en&amp;hash=48E330017D079751232A3DB76DEC9575A2A0D419" target="_blank">2010 comments</a> (1/19/2011)</td>
+        </tr>
+        <tr>
+            <td>1997-2010 (6/18/2012)</td>
+            <td> <br />
+            </td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2012Update_102513.pdf?la=en&amp;hash=DCD6A2B919B752E2AC50895E051F5D143B23F10B" target="_blank">2012 dayflow update/correction</a></td>
+        </tr>
+        <tr>
+            <td>1997-2010 (3/15/2013)</td>
+            <td> <br />
+            </td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2013CommentsCorrection_3_15_13.pdf?la=en&amp;hash=408857F4308F2A52964B1A32B672CD8723E590EB" target="_blank">2013 dayflow update/correction</a></td>
+        </tr>
+        <tr>
+            <td>2011 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2011.csv?la=en&amp;hash=C97E5248185C2A1D740DBBCFA3AA6E65FEA5D415" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2011Comments.pdf?la=en&amp;hash=F391AF64E755FB73694FF7B33B0515EB93372FF2" target="_blank">2011 comments</a> (4/30/2012)</td>
+        </tr>
+        <tr>
+            <td>2012 (05/23/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2012-05-23-2013.csv?la=en&amp;hash=A7CB3405B2850425E5B81BC4C049DCF04E0539F7" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2012Comments_12-12-13.pdf?la=en&amp;hash=F10D0F86DFE315C7609DC7706E1520A8616A6594" target="_blank">2012 comments</a></td>
+        </tr>
+        <tr>
+            <td>1997-2012 (5/23/2013)</td>
+            <td> <br />
+            </td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2013_CommentsCorrection_5_23_13.pdf?la=en&amp;hash=D0E2774F3A3D0FAA238BF09B3809553AEC59CC93" target="_blank">2013 dayflow update/correction</a></td>
+        </tr>
+        <tr>
+            <td>2012 (10/25/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2012x_10-25-2013.csv?la=en&amp;hash=F85BBD328D12138101A5FA846FC3E51B37F0898B" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2012Update_102513.pdf?la=en&amp;hash=DCD6A2B919B752E2AC50895E051F5D143B23F10B" target="_blank">2012 update</a></td>
+        </tr>
+        <tr>
+            <td>2013 (12/13/2013)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2013_12-13-2013.csv?la=en&amp;hash=148A5868663C47C8C49CB100A0732A30E2221E09" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2013_Comments_update_02_18_14.pdf?la=en&amp;hash=8C99BD5554F5A3D8AEAFDDCFABD8EFE620C7D454" target="_blank">2013 comments</a></td>
+        </tr>
+        <tr>
+            <td>2013 (2/20/2015)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2013x_2-20-2015.csv?la=en&amp;hash=402EF16FFD2B138B6F618CDF3F4838962C4F0880" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2013Update_022015.pdf?la=en&amp;hash=EA512A44F44A31D6FDB3ACA723D44984AAFA2F42" target="_blank">2013 comments</a></td>
+        </tr>
+        <tr>
+            <td>2014 (11/24/2014)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2014_11-24-2014.csv?la=en&amp;hash=9545A7419E38419EA500C957F30E4A91480DBECB" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2014_comments.pdf?la=en&amp;hash=BA19CE727AF66ED2A6F3B3E217E70542117DE845" target="_blank">2014 comments</a></td>
+        </tr>
+        <tr>
+            <td>2014 (9/24/2015)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2014a_9-24-2015.csv?la=en&amp;hash=99462B3475D00DCC1B316920682B811A370D4900" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2014Update_082415.pdf?la=en&amp;hash=5B3722EB167F1BD106B1114D5512C33CC06FB369" target="_blank">2014 dayflow update</a></td>
+        </tr>
+        <tr>
+            <td>2015 (12/23/2015)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2015.csv?la=en&amp;hash=A19121EE9C129CBEE3B83068B39602E0A26A413A" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2015Comments.pdf?la=en&amp;hash=E39DE8463926CB200B39C60CB42EE97A0A8BCD1B" target="_blank">2015 comments</a></td>
+        </tr>
+        <tr>
+            <td>2015 (08/26/2016)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2015a.csv?la=en&amp;hash=F60C1693B327C0374802045A59365578D7B43E11" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/water_year_2015_metadata_update.pdf?la=en&amp;hash=20D1CFB65FDE2A07EF2490EDE85F505BA9CF26F2" target="_blank">2015 comments corrections</a></td>
+        </tr>
+        <tr>
+            <td>2015 (05/31/2017)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2015-05-31-2017.csv?la=en&amp;hash=614C917A27D85F647A10F84C567FF9CA12CADFB4" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2015Update_050317.pdf?la=en&amp;hash=DC29711D9AFFFF5D1B204AE777E2900A76A2A109" target="_blank">2015 comments update</a></td>
+        </tr>
+        <tr>
+            <td>2016 (12/30/2016)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2016.csv?la=en&amp;hash=B7DC5C112A4696509FB81B34721D90B53C70D971" target="_blank">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2016Comments.pdf?la=en&amp;hash=BD43DA17D129841FC9DA09F13826D1B7DEC4B42C" target="_blank">2016 comments</a></td>
+        </tr>
+        <tr>
+            <td>2017 (02/02/2018)</td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/CSV-Files/dayflowCalculations2017.csv?la=en&amp;hash=DB8CF9776496BD8C79CF9C7CA47A954A5A497172">CSV</a></td>
+            <td><a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Comments/2017-Comments.pdf?la=en&amp;hash=6F9796652835114A20FE9ACC62FE81CDD1CC9AD8">2017 comments</a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p>* Dayflow Comments are the documents that were originally issued with Dayflow output for water years 1997-1999. The information provided in the Corrections pages is more up to date.</p></div>
+                                <div></div>
+                            </div>
+                                    <!-- End content -->
+                                </section>
+                            </div>
+                        </div>
+                    </div>                
+        </div>    
+
+<script type="text/javascript">
+    window.onload = function () {
+        var hashTag = window.location.hash
+        if (hashTag != null) {
+            accordianClick('.link-' + hashTag.slice(1, hashTag.length));
+        }
+    }
+</script>
+
+
+
+    <div class="group">
+        <div class="half">
+            
+
+
+
+        <h3>Publications &amp; Reports</h3>
+
+
+        <ul class="list-understated">
+
+
+
+ 
+    <li>
+        <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Publications/Dayflow-1930-1955.pdf" target="_blank" class="">Dayflow: 1930 to 1955</a>
+    </li>
+          
+
+
+
+
+
+ 
+    <li>
+        <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Publications/Current-Dayflow-Documentation.pdf" target="_blank" class="">Dayflow: An Estimate of Daily Average Outflow: Introduction</a>
+    </li>
+          
+
+
+
+
+
+ 
+    <li>
+        <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Publications/Dayflow-1986.pdf" target="_blank" class="">Dayflow 1986</a>
+    </li>
+          
+
+
+
+
+
+ 
+    <li>
+        <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Files/Publications/Dayflow-Net-Delta-Outflow-vs-Net-Delta-Outflow-Index.pdf" target="_blank" class="">Dayflow: Net Delta Outflow vs Net Delta Outflow Index</a>
+    </li>
+          
+
+
+
+        </ul>
+
+
+
+
+        </div>
+        <div class="half">
+            
+
+
+
+        <h3>Resources</h3>
+
+
+        <ul class="list-understated">
+
+
+
+ 
+    <li>
+        <a href="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Interagency-Ecological-Program/Files/IEP_Vol30_2.pdf" target="" class="">IEP Newsletter</a>
+    </li>
+          
+
+
+
+        </ul>
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="detail clearfix content-title">
+                    <h3>Map</h3>
+            <div class="description">
+                <div class="rich-text">
+                    <img alt="" src="/-/media/DWR-Website/Web-Pages/Programs/Environmental-Services/Compliance-Monitoring--Assessment/Dayflow/Images/Preliminary-map.gif?la=en&amp;hash=DFA204D014CD77FD76B8807B4CD69976B4F743B0" width="720" height="960" />
+                </div>
+            </div>
+    </div>
+        <div class="row">
+            <div class="half">
+                <h3>Related Pages</h3>
+            </div>
+        </div>
+        <div class="row">
+                        <div class="half">
+                            <ul class="list-understated">
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance">Bay-Delta Environmental Compliance </a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Longfin-Smelt-Efficiency-Study">Longfin Smelt Efficiency Study</a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Green-Sturgeon-Laboratory-Study">Green Sturgeon Laboratory Study</a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Skinner-Evaluations-and-Improvements-Study">Skinner Evaluations and Improvements Study (SEIS) </a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Clifton-Court-Forebay-Dredging-In-Depth-Study">Clifton Court Forebay Predation Reduction Alternatives – In-Depth Dredging Study</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="half">
+                            <ul class="list-understated">
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Roaring-River-Distribution-System-Fish-Screen-Evaluation-Program">Roaring River Distribution System Fish Screen Evaluation Program</a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/North-Bay-Aqueduct-Fish-Screen-Evaluation-Program">North Bay Aqueduct Fish Screen Evaluation Program</a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Clifton-Court-Forebay-Predatory-Fish-Relocation-Study">Clifton Court Forebay Predation Alternatives - Fish Relocation Study </a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Release-Site-Predation-Monitoring-Study">Release Site Predation Monitoring Study</a></li>
+                            <li><a href="/Programs/Bay-Delta/Bay-Delta-Environmental-Compliance/Clifton-Court-Forebay-Predator-Reduction-Alternative---Electrofishing">Clifton Court Forebay Predation Reduction Alternatives – Electrofishing Study</a></li>
+
+                            </ul>
+                        </div>
+
+
+            </div>
+
+
+    </div>
+</main>       
+<div class="main-secondary main-secondary-right">
+    
+
+
+
+
+    <div class="detail clearfix content-title">
+                    <h3>Contact Information</h3>
+            <div class="description">
+                <div class="rich-text">
+                    <p style="margin-bottom: 0.0001pt;"><strong><span>Environmental Planning and Information Branch</span></strong><span><br />
+<strong><span>Dayflow Program</span></strong><br />
+3500 Industrial Blvd.<br />
+West Sacramento, CA 95691<br />
+(916) 376-9728<br />
+Email: </span><a href="mailto:dayflow@water.ca.gov"><span>dayflow@water.ca.gov</span></a></p>
+                </div>
+            </div>
+    </div>
+        <div class="clearfix"></div>
+            <div class="detail">
+                <h3>Tags</h3>
+                <div class="tag-cloud">
+                                <a href="#" class="tag-link" title="Delta" data-tag-type="activity">Delta</a>
+                                <a href="#" class="tag-link" title="Hydrology" data-tag-type="activity">Hydrology</a>
+                                <a href="#" class="tag-link" title="Applications" data-tag-type="activity">Applications</a>
+                                <a href="#" class="tag-link" title="Environmental Services" data-tag-type="program">Environmental Servic ...</a>
+                                <a href="#" class="tag-link" title="Bay Delta" data-tag-type="program">Bay Delta</a>
+                </div>
+            </div>
+
+
+
+
+
+
+</div>
+                </div>
+        </div>
+
+
+    
+
+    <div class="section section-impact section-footer">
+        <div class="container">
+                <div class="row group">
+
+
+
+
+<div class="quarter" style="height: 223px;">
+      <h4>About</h4>
+    <ul class="list-standout">
+
+
+
+ 
+    <li>
+        <a href="/Contact/Directory" target="">Contact</a>
+    </li>
+          
+
+
+
+
+
+ 
+    <li>
+        <a href="/About/Executive-Team" target="">Executive Bio</a>
+    </li>
+          
+
+
+
+
+
+ 
+    <li>
+        <a href="/About/Divisions-And-Offices/Organizational-Chart" target="">Organizational chart</a>
+    </li>
+          
+
+
+    </ul>
+</div>
+
+
+
+
+
+
+<div class="quarter" style="height: 223px;">
+      <h4>Campaigns</h4>
+    <ul class="list-standout">
+
+
+
+    <li>
+        <a href="http://registertovote.ca.gov" target="_blank">Register to vote</a>
+    </li>
+
+
+
+    <li>
+        <a href="http://saveourwater.com/" target="_blank">Save Our Water</a>
+    </li>
+
+
+
+    <li>
+        <a href="http://www.flexalert.org" target="_blank">Flex Alert</a>
+    </li>
+    </ul>
+</div>
+
+
+
+
+
+
+<div class="quarter" style="height: 223px;">
+      <h4>Publications</h4>
+    <ul class="list-standout">
+
+
+
+    <li>
+        <a href="/News/News-Releases" target="">News Releases</a>
+    </li>
+
+
+
+    <li>
+        <a href="/What-We-Do/Education/Education-Materials" target="">Water Education Materials</a>
+    </li>
+
+
+
+    <li>
+        <a href="/Library/Other-DWR-Portals" target="">DWR Portals</a>
+    </li>
+    </ul>
+</div>
+
+
+
+
+
+
+<div class="quarter" style="height: 223px;">
+      <h4>Support</h4>
+    <ul class="list-standout">
+
+
+
+    <li>
+        <a href="/Conditions-of-Use" target="">Conditions of Use</a>
+    </li>
+
+
+
+    <li>
+        <a href="/Tech-Specs" target="">Tech Specs</a>
+    </li>
+
+
+
+    <li>
+        <a href="/Help" target="">Help</a>
+    </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div class="row group m-t-md">
+
+
+
+            <div class="third">
+                <div class="profile-banner profile-banner-dk" itemscope itemtype="http://schema.org/Person">
+                            <div class="inner" style="background:url(/-/media/DWR-Website/Web-Pages/Images/Profile-Banner-Images/banner_jerry-brown-dk-v2.png) no-repeat right bottom">
+                                <div class="banner-subtitle">Office of Governor</div>
+                                <div class="banner-title" itemprop="name">Edmund G. Brown Jr.</div>
+                                <div class="banner-link"><a href="https://www.gov.ca.gov/home.php" target="_blank" itemprop="url">Visit Governor Website</a></div>
+                            </div>
+                </div>
+            </div>
+
+
+
+            <div class="third">
+                <div class="profile-banner profile-banner-dk" itemscope itemtype="http://schema.org/Person">
+                            <div class="inner" style="background:url(/-/media/DWR-Website/Web-Pages/Images/Profile-Banner-Images/banner_john-laird-dk-v2.png) no-repeat right bottom">
+                                <div class="banner-subtitle">Natural Resources Agency</div>
+                                <div class="banner-title" itemprop="name">John Laird</div>
+                                <div class="banner-link"><a href="http://resources.ca.gov/" target="_blank" itemprop="url">Visit Natural Resources Website</a></div>
+                            </div>
+                </div>
+            </div>
+
+
+
+            <div class="third">
+                <div class="profile-banner profile-banner-dk" itemscope itemtype="http://schema.org/Person">
+                            <div class="inner" style="background:url(/-/media/DWR-Website/Web-Pages/Images/Profile-Banner-Images/banner_director1.jpg) no-repeat right bottom">
+                                <div class="banner-subtitle">Department of Water Resources</div>
+                                <div class="banner-title" itemprop="name">Karla Nemeth</div>
+                                <div class="banner-link"><a href="/Executive-Bios-Director" target="" itemprop="url">Visit Director Profile Page</a></div>
+                            </div>
+                </div>
+            </div>
+                </div>
+
+
+        </div>
+    </div>
+
+
+    
+
+    <!-- Global Footer -->
+    <footer id="footer" class="global-footer">
+        <div class="container">
+            <div class="row">
+                <div class="three-quarters">
+                    <ul class="footer-links">
+                        <li><a href="#skip-to-content">Back to Top</a></li>
+                                    <li>
+                                        <a href="/Contact" target="">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Privacy-Policy" target="">Privacy Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Conditions-of-Use" target="">Conditions of Use</a>
+                                    </li>
+                    </ul>
+                </div>
+                <div class="quarter text-right">
+                    <ul class="socialsharer-container">
+
+                                    <li><a href="https://www.facebook.com/CADWR" target="_blank"><span class="ca-gov-icon-facebook"></span><span class="sr-only">Facebook</span></a></li>
+                                    <li><a href="https://twitter.com/CA_DWR" target="_blank"><span class="ca-gov-icon-twitter"></span><span class="sr-only">Twitter</span></a></li>
+                                    <li><a href="https://www.instagram.com/cadepartmentofwaterresources" target="_blank"><span class="ca-gov-icon-instagram"></span><span class="sr-only">Instagram</span></a></li>
+                                    <li><a href="https://www.youtube.com/user/calwater" target="_blank"><span class="ca-gov-icon-youtube"></span><span class="sr-only">YouTube</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Statement -->
+        <div class="copyright">
+            <div class="container">
+                Copyright &copy; 2018 State of California
+            </div>
+        </div>
+    </footer>
+    <!-- Extra Decorative Content -->
+    <div class="decoration-last">&nbsp;</div>
+
+    <!-- Extra Decorative Content -->
+    <div class="decoration-last">&nbsp;</div>
+    <!-- Load jQuery from CDN with fallback to local copy -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+        //Fall back to local copy if no jquery found
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='/js/libs/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+
+    <script src="/js/libs/jquery.mask.min.js"></script>
+
+    <!-- Load template core -->
+    <script src="/js/dwr.core.js"></script>
+    <script src="/js/search.dwr.core.js"></script>
+    <script src="/js/mapthat.dwr.core.js"></script>
+    <script src="/js/relatednews.dwr.core.js"></script>
+    <script src="/js/calculator.js"></script>
+
+
+
+    <!-- Set Location Endpoint-->
+    <script type="text/javascript">
+        var __getLocation = "/api/sitecore/ImageByLocation/GetGeo";
+        var __getImageByLocation = "/api/sitecore/ImageByLocation/GetLocationImageUrl";
+    </script>
+
+    
+        <script type="text/javascript">
+            //Google Analytics script for Tracking
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-112728183-1']);
+            _gaq.push(['_setDomainName', '.ca.gov']);
+            _gaq.push(['_trackPageview']);
+
+            _gaq.push(['b._setAccount', 'UA-3419582-2']); // statewide analytics - do not remove or change
+            _gaq.push(['_gat._anonymizeIp']);
+            _gaq.push(['b._setDomainName', '.ca.gov']);
+            _gaq.push(['b._trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    
+
+</body>
+
+</html>
