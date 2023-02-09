@@ -5,12 +5,14 @@
 \alias{CDECSensors}
 \title{A lookup table of sensors available on the California Data Exchange Center
 website.}
-\format{A data frame with 37 rows and 3 variables:
+\format{
+A data frame with 37 rows and 3 variables:
 \describe{
   \item{sensor}{sensor identifier, integer}
   \item{variable}{name of variable, string}
   \item{unit}{measurement units, string}
-}}
+}
+}
 \source{
 \url{http://cdec.water.ca.gov}
 }

@@ -12,6 +12,7 @@ Description: Provides utilities for analysis of hydrological and biological
 Depends:
     R (>= 3.2.1)
 License: GPL-3
+Encoding: UTF-8
 LazyData: TRUE
 Imports:
     lubridate,
@@ -31,4 +32,4 @@ Imports:
     munsell,
     plyr,
     assertthat
-RoxygenNote: 6.1.1
+RoxygenNote: 7.2.3

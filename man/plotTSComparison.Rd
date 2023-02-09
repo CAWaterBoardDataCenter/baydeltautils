@@ -5,8 +5,15 @@
 \title{Plot multiple time series of the same pair of variables from a list of data
 frames with conforming entries.}
 \usage{
-plotTSComparison(formula, l.df, v.col = NULL, main = NULL,
-  ylab = NULL, xlab = "Date", ...)
+plotTSComparison(
+  formula,
+  l.df,
+  v.col = NULL,
+  main = NULL,
+  ylab = NULL,
+  xlab = "Date",
+  ...
+)
 }
 \arguments{
 \item{formula}{plotting formula of form y~x}

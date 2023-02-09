@@ -5,11 +5,13 @@
 \alias{dayflowFiles}
 \title{The set of files that comprise the Dayfow dataset. Check the Dayflow website
 referenced below for updates.}
-\format{A list with two named fields:
+\format{
+A list with two named fields:
 \describe{
   \item{merged}{list of URLs for multi-year files, with elements named yyyy_yyyy}
   \item{single}{list of URLs for single-year files, with elements named yyyy}
-}}
+}
+}
 \source{
 \url{https://water.ca.gov/Programs/Environmental-Services/Compliance-Monitoring-And-Assessment/Dayflow-Data}
 }

@@ -4,8 +4,7 @@
 \alias{readExportedDSS}
 \title{Import DSS data from an Excel (XLSX) file.}
 \usage{
-readExportedDSS(file, sheet = 1, dataRow = 8, nameRow = 2,
-  debug = FALSE)
+readExportedDSS(file, sheet = 1, dataRow = 8, nameRow = 2, debug = FALSE)
 }
 \arguments{
 \item{file}{XLSX file containing one or more worksheets exported from a DSS

@@ -5,8 +5,7 @@
 \title{An S3 class to represent flow schedules on a fixed time step (defaults
 to monthly). This class is under development and should be used with caution.}
 \usage{
-flow_schedule(flow, time, return_freq = 0.5, step = "month",
-  wy_start = 10)
+flow_schedule(flow, time, return_freq = 0.5, step = "month", wy_start = 10)
 }
 \arguments{
 \item{flow}{a sequence of flows}
