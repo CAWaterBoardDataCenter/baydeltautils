@@ -5,8 +5,11 @@
 \title{Return a data frame containing the monthly full natural flow volumes for the
 Eight River Index stations in acre-feet.}
 \usage{
-eightRiverMonthly(startDate = as.Date("1905-10-01"),
-  endDate = Sys.Date(), raw = FALSE)
+eightRiverMonthly(
+  startDate = as.Date("1905-10-01"),
+  endDate = Sys.Date(),
+  raw = FALSE
+)
 }
 \arguments{
 \item{startDate}{start date for time series}

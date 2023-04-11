@@ -4,9 +4,18 @@
 \alias{plotExceedanceComparison}
 \title{Plot exceedance curves for each series of values in a list.}
 \usage{
-plotExceedanceComparison(l.x, v.col = NULL, ylim = NULL, main = NULL,
-  ylab = NULL, xlab = "Exceedance Frequency", legend = NULL,
-  legend.cex = 1, type = "p", ...)
+plotExceedanceComparison(
+  l.x,
+  v.col = NULL,
+  ylim = NULL,
+  main = NULL,
+  ylab = NULL,
+  xlab = "Exceedance Frequency",
+  legend = NULL,
+  legend.cex = 1,
+  type = "p",
+  ...
+)
 }
 \arguments{
 \item{l.x}{list of data series}

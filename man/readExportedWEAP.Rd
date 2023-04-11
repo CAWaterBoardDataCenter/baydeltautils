@@ -4,9 +4,17 @@
 \alias{readExportedWEAP}
 \title{Import flow data exported from WEAP in the ReadFromFile csv format.}
 \usage{
-readExportedWEAP(file, divisor = 1, discardCA = TRUE, endYear = NULL,
-  include.sum = FALSE, data.dir = NULL, date.only = FALSE,
-  skip = 5, narrow = FALSE)
+readExportedWEAP(
+  file,
+  divisor = 1,
+  discardCA = TRUE,
+  endYear = NULL,
+  include.sum = FALSE,
+  data.dir = NULL,
+  date.only = FALSE,
+  skip = 5,
+  narrow = FALSE
+)
 }
 \arguments{
 \item{file}{the full path to the file to read, or the relative path if

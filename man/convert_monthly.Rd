@@ -4,8 +4,14 @@
 \alias{convert_monthly}
 \title{Convert a monthly time series of volumes or flows between unit systems.}
 \usage{
-convert_monthly(data, ignore_cols = NULL, rate_conversion,
-  volume_conversion, destination_type, destination_unit)
+convert_monthly(
+  data,
+  ignore_cols = NULL,
+  rate_conversion,
+  volume_conversion,
+  destination_type,
+  destination_unit
+)
 }
 \arguments{
 \item{data}{data frame containing time series to be converted}

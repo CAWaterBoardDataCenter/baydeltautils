@@ -4,8 +4,13 @@
 \alias{getCDECMulti}
 \title{Retrieve data from CDEC for multiple sensors at multiple stations.}
 \usage{
-getCDECMulti(stations, sensors, duration = "D",
-  startDate = "1900-10-01", endDate = Sys.Date())
+getCDECMulti(
+  stations,
+  sensors,
+  duration = "D",
+  startDate = "1900-10-01",
+  endDate = Sys.Date()
+)
 }
 \arguments{
 \item{stations}{n-element vector of station IDs}

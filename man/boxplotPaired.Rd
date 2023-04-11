@@ -4,8 +4,15 @@
 \alias{boxplotPaired}
 \title{Draw a paired boxplot}
 \usage{
-boxplotPaired(formula, df1, df2, border = c("black", "blue"),
-  width = 0.25, sepFactor = 1.5, ...)
+boxplotPaired(
+  formula,
+  df1,
+  df2,
+  border = c("black", "blue"),
+  width = 0.25,
+  sepFactor = 1.5,
+  ...
+)
 }
 \arguments{
 \item{formula}{formula of form y~x to be applied to both data frames}

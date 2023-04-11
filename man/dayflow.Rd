@@ -4,7 +4,8 @@
 \name{dayflow}
 \alias{dayflow}
 \title{Full Dayflow data set for water years 1956-2017.}
-\format{A data frame with 22646 rows and 29 columns:
+\format{
+A data frame with 22646 rows and 29 columns:
 \describe{
  \item{year}{calendar year}
  \item{mo}{month (integer)}
@@ -35,7 +36,8 @@
  \item{effec}{Effective inflow to the western/central Delta}
  \item{effdiv}{Effective percent diverted from the western/central Delta}
  \item{x2}{Estimated distance from Golden Gate to 2 ppt salinity, km}
-}}
+}
+}
 \source{
 \url{https://water.ca.gov/Programs/Environmental-Services/Compliance-Monitoring-And-Assessment/Dayflow-Data}
 }

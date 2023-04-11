@@ -4,8 +4,16 @@
 \alias{plotTSCols}
 \title{Plot multiple time series from a single data frame on a single set of axes.}
 \usage{
-plotTSCols(df, xcol = 1, ycol = NULL, v.col = NULL, main = NULL,
-  ylab = NULL, xlab = "Date", ...)
+plotTSCols(
+  df,
+  xcol = 1,
+  ycol = NULL,
+  v.col = NULL,
+  main = NULL,
+  ylab = NULL,
+  xlab = "Date",
+  ...
+)
 }
 \arguments{
 \item{df}{data frame}
