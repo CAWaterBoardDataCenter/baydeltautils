@@ -4,13 +4,15 @@
 \name{uf_mapping}
 \alias{uf_mapping}
 \title{Unimpaired flow location mapping.}
-\format{A data frame with 23 rows and 4 columns:
+\format{
+A data frame with 23 rows and 4 columns:
 \describe{
  \item{name}{descriptive name for each location}
  \item{c2vsim}{Reach designation for C2VSim coarse-grid model}
  \item{svufm}{SVUFM location name}
  \item{sacwam}{SacWAM location name}
- }}
+ }
+}
 \usage{
 uf_mapping
 }

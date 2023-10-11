@@ -4,8 +4,14 @@
 \alias{getCDECData}
 \title{Retrieve data from CDEC for a single sensor at a single station.}
 \usage{
-getCDECData(station, sensor, duration = "M", startDate = "1900-10-01",
-  endDate = Sys.Date(), mode = "retrieve")
+getCDECData(
+  station,
+  sensor,
+  duration = "M",
+  startDate = "1900-10-01",
+  endDate = Sys.Date(),
+  mode = "retrieve"
+)
 }
 \arguments{
 \item{station}{CDEC three character station code (case insensitive)}

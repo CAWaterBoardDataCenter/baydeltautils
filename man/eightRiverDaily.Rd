@@ -5,8 +5,11 @@
 \title{Return a data frame containing the daily sum of full natural flows for Eight
 River Index stations in cubic feet per second.}
 \usage{
-eightRiverDaily(startDate = as.Date("1999-10-01"),
-  endDate = Sys.Date(), raw = FALSE)
+eightRiverDaily(
+  startDate = as.Date("1999-10-01"),
+  endDate = Sys.Date(),
+  raw = FALSE
+)
 }
 \arguments{
 \item{startDate}{start date for time series}

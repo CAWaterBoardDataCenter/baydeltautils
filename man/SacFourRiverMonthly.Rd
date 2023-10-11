@@ -5,8 +5,11 @@
 \title{Return a data frame containing the monthly full natural flow volumes for the
 Sacramento Valley Index stations in acre-feet.}
 \usage{
-SacFourRiverMonthly(startDate = as.Date("1905-10-01"),
-  endDate = Sys.Date(), raw = FALSE)
+SacFourRiverMonthly(
+  startDate = as.Date("1905-10-01"),
+  endDate = Sys.Date(),
+  raw = FALSE
+)
 }
 \arguments{
 \item{startDate}{start date for time series}

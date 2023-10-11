@@ -4,10 +4,22 @@
 \alias{plotExceedance}
 \title{Plot an exceedance curve.}
 \usage{
-plotExceedance(x, add = F, pch = 19, col = "black",
-  xlab = "Exceedance Frequency", ylab = "x", ylim = NULL,
-  xlim = c(0, 1), bg = NA, type = "p", jitter = FALSE,
-  jitterTol = 1e-09, plot.pos = "center", ...)
+plotExceedance(
+  x,
+  add = F,
+  pch = 19,
+  col = "black",
+  xlab = "Exceedance Frequency",
+  ylab = "x",
+  ylim = NULL,
+  xlim = c(0, 1),
+  bg = NA,
+  type = "p",
+  jitter = FALSE,
+  jitterTol = 1e-09,
+  plot.pos = "center",
+  ...
+)
 }
 \arguments{
 \item{x}{the data series}
