@@ -15,7 +15,7 @@
 #' @param station CDEC three character station code (case insensitive)
 #' @param sensor CDEC numeric sensor code [TODO: document codes]
 #' @param duration CDEC single character duration code (event=E, hourly=H,
-#' daily=D, or monthly=M)
+#' daily=D, or monthly=M; defaults to "M")
 #' @param startDate start date for time series
 #' @param endDate end date for time series
 #' @param mode "retrieve" to retrieve data, "url" to return URL
@@ -29,17 +29,22 @@ getCDECData <- function(station, sensor, duration="M",
                     "&Start=", format.Date(startDate, "%Y-%m-%d"),
                     "&End=", format.Date(endDate, "%Y-%m-%d"), sep="")
   if (mode=="retrieve") {
-    data <- utils::read.csv(queryURL, skip=1, na.strings="m", quote="'")
-    names(data)[1:3] <- c("date", "time", paste(station, as.character(sensor),
-                                                sep="_"))
-    data$date <- as.Date(as.character(data$date), "%Y%m%d")
-    data$time <- lubridate::force_tz(
-      data$date + lubridate::hm(sprintf("%.02f", data$time/100)),
-      tz="Etc/GMT-8")
+    data <- utils::read.csv(queryURL, skip=0, na.strings=c("m", "---"), quote="'",
+                            stringsAsFactors = FALSE)
+    names(data) <- tolower(names(data))
+    data$variable = paste(data$station_id, data$sensor_type, data$duration,
+                          sep="_")
+    data$value <- as.numeric(data$value)
+    data$unit <- data$units
+    data$units <- NULL
+    data$date <- as.Date(lubridate::ymd_hm(data$date.time))
+    data$time <- lubridate::force_tz(lubridate::ymd_hm(data$date.time), tz="Etc/GMT-8")
     data$year <- as.numeric(format.Date(data$date, "%Y"))
-    data$month <- as.numeric(format.Date(data$date, "%m"))
+    data$month <- wyMonth(data$date)
     data$day <- as.numeric(format.Date(data$date, "%d"))
-    data$WY <- waterYear(data$date)
+    data$wy <- waterYear(data$date)
+    data$date.time <- NULL
+    data$obs.date <- NULL
     return(data)
   }
   else { return(queryURL) }
@@ -49,7 +54,7 @@ getCDECData <- function(station, sensor, duration="M",
 #'
 #' @param stations n-element vector of station IDs
 #' @param sensors n-element vector of sensor IDs
-#' @param duration common duration code
+#' @param duration common duration code (defaults to daily, "D")
 #' @param startDate start date for time series
 #' @param endDate end date for time series
 #' @export
@@ -60,34 +65,40 @@ getCDECMulti <- function(stations, sensors, duration="D",
     dataFrames[[i]] <- getCDECData(stations[i], sensors[i], duration,
                                    startDate, endDate)
   }
-  df <- Reduce(function(...) merge(...,
-                                   by=c("date", "time", "day", "month",
-                                        "year", "WY"), all=T), dataFrames)
+  df <- Reduce(rbind, dataFrames)
 }
 
 #' Return a data frame containing the daily sum of full natural flows for Eight
-#' River Index stations in cubic feet per second.
+#' River Index stations in thousand acre-feet.
 #'
 #' @param startDate start date for time series
 #' @param endDate end date for time series
+#' @param na.action how to handle NA values when summing across stations (defaults
+#' to na.omit)
 #' @param raw if TRUE, return a data frame with daily values for each station;
 #' if FALSE, return a data frame containing only the summed index
 #' @export
 eightRiverDaily <- function(startDate=as.Date("1999-10-01"),
-                            endDate=Sys.Date(), raw=FALSE) {
+                            endDate=Sys.Date(), na.action=stats::na.omit,
+                            raw=FALSE) {
   dailyStations <- c("BND", "ORO", "YRS", "FOL",
-                     "NML", "TLG", "MRC", "MIL")
+                     "NML", "TLG", "MRC", "MIL",
+                     "NAT", "EXC", "SJF") # CDEC daily FNF stations moved as of Sept 2020
+  dailySensors <- rep(8,11)
 
-  df <- data.frame(date=seq.Date(as.Date(startDate), as.Date(endDate), by=1))
-  for (station in dailyStations) {
-    df <- merge(df, getCDECData(station, 8, "D", startDate=startDate,
-                                endDate=endDate)[,c(1,3)], by="date")
-  }
+  df <- getCDECMulti(dailyStations, dailySensors, duration="d",
+                     startDate=startDate, endDate=endDate)
 
   if (raw)
     return(df)
-  else
-    return(data.frame(date=df$date, ERI=rowSums(df[,2:9])))
+  else {
+    eri <- stats::aggregate(value~date+unit, df, sum, na.action=na.action)
+    eri$value <- cfs2TAF(eri$value, days=1)
+    eri$unit <- "thousand_acre_feet"
+    eri$variable <- "eight_river_index"
+    return(eri)
+  }
+
 }
 
 #' Return a data frame containing the monthly full natural flow volumes for the
@@ -95,23 +106,25 @@ eightRiverDaily <- function(startDate=as.Date("1999-10-01"),
 #'
 #' @param startDate start date for time series
 #' @param endDate end date for time series
+#' @param na.action how to handle NA values when summing across stations (defaults
+#' to na.omit)
 #' @param raw if TRUE, return a data frame with monthly values for each station;
 #' if FALSE, return a data frame containing only the summed index
 #' @export
 eightRiverMonthly <- function(startDate=as.Date("1905-10-01"),
-                              endDate=Sys.Date(), raw=FALSE) {
+                              endDate=Sys.Date(), na.action=stats::na.omit,
+                              raw=FALSE) {
   monthlyStations <- c("SBB", "FTO", "YRS", "AMF",
                        "SNS", "TLG", "MRC", "SJF")
 
-  df <- data.frame(date=seq.Date(startDate, endDate, by="month"))
-  for (station in monthlyStations) {
-    tmp.df <- getCDECData(station, 65, "M", startDate=startDate)[,c(1,3)]
-    df <- merge(df, getCDECData(station, 65, "M", startDate=startDate,
-                                endDate=endDate)[,c(1,3)], by="date")
-  }
+  monthlySensors <- rep(65,8)
+
+  df <- getCDECMulti(monthlyStations, monthlySensors, duration="m",
+                     startDate=startDate, endDate=endDate)
 
   if (raw) { return(df) }
-  out.df <- data.frame(date=df$date, ERI=rowSums(df[,2:9]))
+  out.df <- stats::aggregate(value~date+unit, df, sum, na.action=na.action)
+  out.df$variable <- "eight_river_index"
   return(out.df)
 }
 
@@ -120,23 +133,24 @@ eightRiverMonthly <- function(startDate=as.Date("1905-10-01"),
 #'
 #' @param startDate start date for time series
 #' @param endDate end date for time series
+#' @param na.action how to handle NA values when summing across stations (defaults
+#' to na.omit)
 #' @param raw if TRUE, return a data frame with monthly values for each station;
 #' if FALSE, return a data frame containing only the summed index
 #' @export
 SacFourRiverMonthly <- function(startDate=as.Date("1905-10-01"),
-                                endDate=Sys.Date(), raw=FALSE) {
+                                endDate=Sys.Date(), na.action=stats::na.omit,
+                                raw=FALSE) {
   monthlyStations <- c("SBB", "FTO", "YRS", "AMF")
   # CDEC sensor: monthly full natural flow in acre-feet
-  sensor <- 65
-  df <- data.frame(date=seq.Date(startDate, endDate, by="month"))
-  for (station in monthlyStations) {
-    tmp.df <- getCDECData(station, 65, "M", startDate=startDate)[,c(1,3)]
-    df <- merge(df, getCDECData(station, 65, "M", startDate=startDate,
-                                endDate=endDate)[,c(1,3)], by="date")
-  }
+  monthlySensors <- rep(65,4)
+
+  df <- getCDECMulti(monthlyStations, monthlySensors, duration="m",
+                     startDate=startDate, endDate=endDate)
 
   if (raw) { return(df) }
-  out.df <- data.frame(date=df$date, FRI=rowSums(df[,2:5]))
+  out.df <- stats::aggregate(value~date+unit, df, sum, na.action=na.action)
+  out.df$variable <- "sac_four_river_index"
   return(out.df)
 }
 

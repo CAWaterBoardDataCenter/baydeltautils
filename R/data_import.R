@@ -2,6 +2,20 @@
 #
 # Functions for data import.
 
+#' Clean a header from a ReadFromFile csv format file exported from WEAP.
+#'
+#' @param header the raw or minimally processed header
+cleanWEAPHeader <- function(header) {
+  WEAP_delete_front <- "^.*\\\\ "
+  WEAP_delete_back <- "\\[.*$"
+  header <- trimws(header)
+  header[1:2] <- c("year", "timestep")
+  header <- gsub(WEAP_delete_back, "", header)
+  header <- make.names(header)
+  header <- gsub("\\.+", "_", header)
+  header <- tolower(sub("X_", "", header))
+}
+
 #' Import flow data exported from WEAP in the ReadFromFile csv format.
 #'
 #' @param file the full path to the file to read, or the relative path if
@@ -21,7 +35,7 @@
 readExportedWEAP <- function(file, divisor=1, discardCA=TRUE,
                              endYear=NULL, include.sum=FALSE,
                              data.dir=NULL, date.only=FALSE, skip=5,
-                             narrow=FALSE) {
+                             narrow=FALSE, long.names=FALSE) {
   file <- ifelse(is.null(data.dir), file, paste(data.dir, file, sep="/"))
   metadata <- readLines(file, n=3)
   description <- gsub("[[:space:]]+", "_",
@@ -39,6 +53,7 @@ readExportedWEAP <- function(file, divisor=1, discardCA=TRUE,
   # WEAP_name_replace <- "\\1"
   WEAP_delete_front <- "^.*\\\\ "
   WEAP_delete_back <- "\\[.*$"
+  #return(WEAP_delete_back)
   # we have 5 lines of pre-header information
   # -- get the header information
   header <- utils::read.csv(file, skip=skip, nrows=1, header=FALSE)
@@ -49,15 +64,26 @@ readExportedWEAP <- function(file, divisor=1, discardCA=TRUE,
   splitHeader <- strsplit(as.character(unlist(header)), "\\\\")
   h1 <- lapply(splitHeader, "[", 1)
   h2 <- lapply(splitHeader, "[", 2)
-  header <- ifelse(grepl("Reach", h2) | grepl("Headflow", h2) | is.na(h2), h1, h2)
-  header <- trimws(header)
-  header[1:2] <- c("year", "timestep")
+  long.names.header <- paste0(h1, h2, "_")
+  long.names.header <- cleanWEAPHeader(long.names.header)
+  short.names.header <- ifelse(grepl("Reach", h2) | grepl("Headflow", h2) | is.na(h2), h1, h2)
+  short.names.header <- cleanWEAPHeader(short.names.header)
+  if (long.names==TRUE) {
+    header <- long.names.header
+    long.short.map <- data.frame(variable=long.names.header[-(1:2)],
+                                 short_name=short.names.header[-(1:2)])
+  }
+  else {
+    header <- short.names.header
+  }
+  #header <- trimws(header)
+  #header[1:2] <- c("year", "timestep")
   #header <- gsub(WEAP_delete_front, "", unlist(header))
-  header <- gsub(WEAP_delete_back, "", header)
+  #header <- gsub(WEAP_delete_back, "", header)
   names(df) <- make.names(header)
   #names(df)[1:2] <- c("year", "timestep")
-  names(df) <- gsub("\\.+", "_", names(df))
-  names(df) <- tolower(sub("X_", "", names(df)))
+  #names(df) <- gsub("\\.+", "_", names(df))
+  #names(df) <- tolower(sub("X_", "", names(df)))
   # -- if the user requested a sum to be included, add it if absent
   if (include.sum & !is.element("Sum", names(df))) {
     df$Sum <- rowSums(df[,-c(1,2)])
@@ -106,6 +132,11 @@ readExportedWEAP <- function(file, divisor=1, discardCA=TRUE,
   # melt the data frame if requested by user
   if (narrow==TRUE) {
     df <- reshape2::melt(df, id.vars=id_cols)
+    # if the user has requested long names and we're returning a narrow data frame,
+    # include the short_name variable for cross-referencing purposes
+    if (long.names==TRUE) {
+      df <- merge(df, long.short.map, by="variable")
+    }
   }
   return(df)
 }
@@ -143,39 +174,84 @@ readExportedDSS <- function(file, sheet=1, dataRow=8, nameRow=2, debug=FALSE) {
   return(data)
 }
 
-#' Import DSS data from an Excel (XLSX) file, retaining full metadata.
+#' Import DSS data from an Excel (XLSX) file with full metadata.
+#'
+#' Import DSS data from an Excel (XLSX) file retaining full metadata.
+#' Defaults should work for data exported from DSSVue to Excel and saved as .XLSX.
+#' If data were imported directly to Excel using the Excel plugin, setting "fromPlugin" to
+#' TRUE will select parameter values that should work. If for some reason neither
+#' of these sets of defaults works, values for "startRow," "metaRows," and "rowNames"
+#' can be set manually.
 #'
 #' @param file XLSX file containing one or more worksheets exported from a DSS
 #' file
 #' @param sheet integer index or name of sheet to read
 #' @param namePart which of the DSS parts (A-F) to use as variable names
+#' @param fromPlugin TRUE if data were exported using Excel plugin (default: FALSE)
+#' @param startRow first row containing data (default: 8)
+#' @param metaRows range of rows containing metadata, may be discontinuous (default: 1:7)
+#' @param rowNames TRUE if row names should be read when importing data (default: TRUE)
+#' @param missingValue values that should be treated as missing, may be list or vector
+#' (default: -901)
 #' @export
-readExportedDSSFull <- function(file, sheet=1, namePart="B") {
+readExportedDSSFull <- function(file, sheet=1, namePart="B", fromPlugin=FALSE,
+                                 startRow=8, metaRows=1:7, rowNames=TRUE,
+                                 missingValue=-901) {
+  # override default data and metadata rows if user specifies that the export
+  # came from the Excel plugin
+  if (fromPlugin) {
+    startRow <- 13
+    metaRows <- c(1:3, 5:6, 11:12)
+    rowNames <- FALSE
+  }
   # Read in the data, starting in row 8
-  data <- openxlsx::read.xlsx(file, sheet=sheet, startRow=8, colNames=FALSE,
-                              rowNames=TRUE, detectDates=TRUE)
-  # Read metadata from first 7 rows of file (empty columns are skipped by
-  # read.xlsx, although this behavior is not documented)
-  meta <- openxlsx::read.xlsx(file, sheet=sheet, rows=seq(1,7),
-                              colNames=FALSE, rowNames=TRUE)
-  # The metadata should have as many columns as we have data series (date not
-  # included). This means that if we have the same number of metadata entries as
-  # data columns, we need to delete the first (empty) metdata entry.
-  if (length(meta)==length(data)) { meta[1] <- NULL }
-  # Transpose the metadata
-  meta <- data.frame(t(meta), stringsAsFactors=FALSE)
-  # Set column names using default of Part B value or alternative specified by
-  # user
-  names(data) <- c("date", meta[[namePart]])
+  data <- openxlsx::read.xlsx(file, sheet=sheet, startRow=startRow, colNames=FALSE,
+                              rowNames=rowNames, detectDates=TRUE,
+                              skipEmptyCols=FALSE)
+  # Rename first column, which will be a date
+  names(data)[1] <- "date"
   # Format dates
   if (class(data$date)=="character") {
     data$date <- lubridate::ymd(data$date)
   }
+  # Under some conditions, dates don't get detected correctly and are read
+  # as numeric values. If data are imported with unexpected dates, verify
+  # whether the origin may be incorrect.
   else if (class(data$date)=="numeric") {
     data$date <- as.Date(data$date, origin="1899-12-30")
   }
-  data_melt <- reshape2::melt(data, id.vars="date")
-  data <- merge(data_melt, meta, by.x="variable", by.y=namePart)
+  # Read metadata from first 7 rows of file, preventing skipping of empty
+  # columns
+  meta <- openxlsx::read.xlsx(file, sheet=sheet, rows=metaRows,
+                              colNames=FALSE, rowNames=FALSE,
+                              skipEmptyCols=FALSE)
+  # Rename the first column, which will specify the DSS part name
+  names(meta)[1] <- "part"
+  # Clean up values in "part" field to accommodate data retrieved by Excel
+  # plug-in
+  meta$part <- sub("Part ", "", meta$part)
+  meta$part <- sub(":", "", meta$part)
+  meta$part <- sub("Data ", "", meta$part)
+  # Verify that data and metadata columns are aligned--this should be true if
+  # the last column of each data frame has the same autogenerated name
+  if (!(names(meta)[length(meta)] == names(data)[length(data)])) {
+    stop("Data and metadata are misaligned.")
+  }
+  # Combine data and metadata
+  # -- first melt data
+  data.m <- reshape2::melt(data, id.vars="date")
+  # -- next, melt and then re-cast metadata; this has the effect of
+  #    transposing the rows and columns, but there may be a better way
+  meta.m <- reshape2::melt(meta, id.vars="part")
+  meta.wide <- reshape2::dcast(meta.m, variable~part)
+  # -- finally, combine data and metadata, and delete the spurious "variable" column
+  data <- merge(data.m, meta.wide, by="variable")
+  #data <- transform(merged.m, variable=NULL)
+  # Replace the spurious "variable" column with the DSS part specified by the user or the
+  # default of part B
+  data <- transform(data, variable=data[[namePart]])
+  # Convert missingValue values to NA
+  data$value[which(data$value %in% missingValue)] <- NA
   # Make units conform to baydeltautils package conventions
   names(data)[which(names(data)=="Units")] <- "unit"
   data$unit[which(data$unit=="CFS")] <- "cubic_feet_per_second"
