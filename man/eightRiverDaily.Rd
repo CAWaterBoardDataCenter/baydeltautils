@@ -3,11 +3,12 @@
 \name{eightRiverDaily}
 \alias{eightRiverDaily}
 \title{Return a data frame containing the daily sum of full natural flows for Eight
-River Index stations in cubic feet per second.}
+River Index stations in thousand acre-feet.}
 \usage{
 eightRiverDaily(
   startDate = as.Date("1999-10-01"),
   endDate = Sys.Date(),
+  na.action = stats::na.omit,
   raw = FALSE
 )
 }
@@ -16,10 +17,13 @@ eightRiverDaily(
 
 \item{endDate}{end date for time series}
 
+\item{na.action}{how to handle NA values when summing across stations (defaults
+to na.omit)}
+
 \item{raw}{if TRUE, return a data frame with daily values for each station;
 if FALSE, return a data frame containing only the summed index}
 }
 \description{
 Return a data frame containing the daily sum of full natural flows for Eight
-River Index stations in cubic feet per second.
+River Index stations in thousand acre-feet.
 }

@@ -31,6 +31,8 @@ cleanWEAPHeader <- function(header) {
 #' returned data frame
 #' @param skip (optional) number of lines to skip before the header row
 #' @param narrow (optional) if TRUE, convert data frame to narrow format
+#' @param long.names (optional) if TRUE, generate long variable names from
+#' SacWAM results
 #' @export
 readExportedWEAP <- function(file, divisor=1, discardCA=TRUE,
                              endYear=NULL, include.sum=FALSE,

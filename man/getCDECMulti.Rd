@@ -17,7 +17,7 @@ getCDECMulti(
 
 \item{sensors}{n-element vector of sensor IDs}
 
-\item{duration}{common duration code}
+\item{duration}{common duration code (defaults to daily, "D")}
 
 \item{startDate}{start date for time series}
 
