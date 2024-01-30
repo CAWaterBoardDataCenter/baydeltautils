@@ -55,6 +55,11 @@ unlist.flow_schedule <- function(x, ...) {
   return(x)
 }
 
+#' Implement an S3 method for \code{mean} for \code{flow_schedule}
+#'
+#' @param x object of class \code{flow_schedule}
+#'
+#' @method mean flow_schedule
 mean.flow_schedule <- function(x) {
   # This is only implemented for monthly time steps, which is all we're using
   # for now.
@@ -62,6 +67,11 @@ mean.flow_schedule <- function(x) {
     sum(lubridate::days_in_month(x$time))
 }
 
+#' Implement an S3 method for \code{plot} for \code{flow_schedule}
+#'
+#' @param x object of class \code{flow_schedule}
+#'
+#' @method plot flow_schedule
 plot.flow_schedule <- function(x, ...) {
   graphics::plot(stats::stepfun(x$time[2:length(x$time)]-0.5, x$flow), ...)
 }
