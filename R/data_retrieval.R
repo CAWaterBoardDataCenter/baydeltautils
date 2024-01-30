@@ -81,10 +81,9 @@ getCDECMulti <- function(stations, sensors, duration="D",
 eightRiverDaily <- function(startDate=as.Date("1999-10-01"),
                             endDate=Sys.Date(), na.action=stats::na.omit,
                             raw=FALSE) {
-  dailyStations <- c("BND", "ORO", "YRS", "FOL",
-                     "NML", "TLG", "MRC", "MIL",
-                     "NAT", "EXC", "SJF") # CDEC daily FNF stations moved as of Sept 2020
-  dailySensors <- rep(8,11)
+  dailyStations <- c("SBB", "FTO", "YRS", "NAT",
+                     "NML", "TLG", "EXC", "SJF")
+  dailySensors <- rep(8,8)
 
   df <- getCDECMulti(dailyStations, dailySensors, duration="d",
                      startDate=startDate, endDate=endDate)
