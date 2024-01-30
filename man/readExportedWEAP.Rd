@@ -13,7 +13,8 @@ readExportedWEAP(
   data.dir = NULL,
   date.only = FALSE,
   skip = 5,
-  narrow = FALSE
+  narrow = FALSE,
+  long.names = FALSE
 )
 }
 \arguments{
@@ -38,6 +39,9 @@ returned data frame}
 \item{skip}{(optional) number of lines to skip before the header row}
 
 \item{narrow}{(optional) if TRUE, convert data frame to narrow format}
+
+\item{long.names}{(optional) if TRUE, generate long variable names from
+SacWAM results}
 }
 \description{
 Import flow data exported from WEAP in the ReadFromFile csv format.

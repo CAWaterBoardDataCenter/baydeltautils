@@ -8,6 +8,7 @@ Sacramento Valley Index stations in acre-feet.}
 SacFourRiverMonthly(
   startDate = as.Date("1905-10-01"),
   endDate = Sys.Date(),
+  na.action = stats::na.omit,
   raw = FALSE
 )
 }
@@ -15,6 +16,9 @@ SacFourRiverMonthly(
 \item{startDate}{start date for time series}
 
 \item{endDate}{end date for time series}
+
+\item{na.action}{how to handle NA values when summing across stations (defaults
+to na.omit)}
 
 \item{raw}{if TRUE, return a data frame with monthly values for each station;
 if FALSE, return a data frame containing only the summed index}

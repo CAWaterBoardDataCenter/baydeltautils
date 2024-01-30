@@ -19,7 +19,7 @@ getCDECData(
 \item{sensor}{CDEC numeric sensor code [TODO: document codes]}
 
 \item{duration}{CDEC single character duration code (event=E, hourly=H,
-daily=D, or monthly=M)}
+daily=D, or monthly=M; defaults to "M")}
 
 \item{startDate}{start date for time series}
 
