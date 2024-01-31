@@ -8,6 +8,8 @@
 }
 \arguments{
 \item{x}{object of class \code{flow_schedule}}
+
+\item{...}{additional parameters passed along to \code{plot}}
 }
 \description{
 Implement an S3 method for \code{plot} for \code{flow_schedule}

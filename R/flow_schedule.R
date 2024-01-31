@@ -70,6 +70,7 @@ mean.flow_schedule <- function(x) {
 #' Implement an S3 method for \code{plot} for \code{flow_schedule}
 #'
 #' @param x object of class \code{flow_schedule}
+#' @param ... additional parameters passed along to \code{plot}
 #'
 #' @method plot flow_schedule
 plot.flow_schedule <- function(x, ...) {
