@@ -81,8 +81,8 @@ getCDECMulti <- function(stations, sensors, duration="D",
 eightRiverDaily <- function(startDate=as.Date("1999-10-01"),
                             endDate=Sys.Date(), na.action=stats::na.omit,
                             raw=FALSE) {
-  dailyStations <- c("SBB", "FTO", "YRS", "NAT",
-                     "NML", "TLG", "EXC", "SJF")
+  dailyStations <- c("SBB", "FTO", "YRS", "AMF",
+                     "NML", "TLG", "MRC", "SBF")
   dailySensors <- rep(8,8)
 
   df <- getCDECMulti(dailyStations, dailySensors, duration="d",
@@ -114,7 +114,7 @@ eightRiverMonthly <- function(startDate=as.Date("1905-10-01"),
                               endDate=Sys.Date(), na.action=stats::na.omit,
                               raw=FALSE) {
   monthlyStations <- c("SBB", "FTO", "YRS", "AMF",
-                       "SNS", "TLG", "MRC", "SJF")
+                       "SNS", "TLG", "MRC", "SBF")
 
   monthlySensors <- rep(65,8)
 
